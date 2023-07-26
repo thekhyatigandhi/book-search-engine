@@ -14,7 +14,12 @@ const LoginForm = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   // declaring loginUser with useMutation
-  const [loginUser, { error }] = useMutation(LOGIN_USE);
+  const [loginUser, { error }] = useMutation(LOGIN_USER);
+
+  useEffect(() => {
+    if (error) setShowAlert(true);
+    else setShowAlert(false);
+  }, [error]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
