@@ -39,7 +39,9 @@ Start with installing the dependencies:
 npm install
 
 ```
-Once the dependencies are installed, ```
+Once the dependencies are installed, 
+
+```
 npm start
 
 ```
