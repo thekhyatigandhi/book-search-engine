@@ -43,10 +43,9 @@ Once the dependencies are installed,
 
 ```
 npm start
-
 ```
 
--By following these steps, you can run the project locally and have full control over its functionality.
+By following these steps, you can run the project locally and have full control over its functionality.
 
 ## Usage
 
