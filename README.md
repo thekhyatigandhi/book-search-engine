@@ -1,7 +1,5 @@
 # book-search-engine
 
-https://khyati-book-search-8e10207ee80d.herokuapp.com/
-
 ## Description
 
 The Book Search Engine is a web application that allows users to search for books using keywords and view search results from the Google Books API. Users can sign up or log in to the site to access additional features, such as saving books to their account and viewing their saved books. The application provides a user-friendly interface with a simple menu and search functionality to make it easy for users to find and manage their favorite books. </br>
