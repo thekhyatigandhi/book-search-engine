@@ -53,22 +53,22 @@ npm start
 Access the [deployed Heroku link](https://khyati-book-search-8e10207ee80d.herokuapp.com/) using your preferred browser.
 
 -Open your web browser and navigate to http://localhost:3000.
--The homepage will display a menu with two options: "Search for Books" and "Login/Signup."
--If you choose "Search for Books," you'll see an input field to search for books. Enter a search term and click the submit button to view search results.
--If you choose "Login/Signup," a modal will appear with a toggle between "Login" and "Signup." Choose the appropriate option.
--If you choose "Signup," you'll be presented with three inputs for a username, an email address, and a password. Enter the required information and click the signup button to create your account and log in.
--If you choose "Login," you'll be presented with inputs for an email address and a password. Enter your account's email and password and click the login button to log in.
--Once logged in, the menu options will change to "Search for Books," "My Saved Books," and "Logout."
--When you search for books while logged in, you'll see an additional button to "Save" a book to your account.
--Click on the "Save" button on a book to add it to your saved books list.
--To view your saved books, click on "My Saved Books" in the menu.
--The "My Saved Books" page will display all the books you have saved, and you can click on the "Remove" button to delete a book from your saved list.
--To log out of the site, click on the "Logout" button in the menu.
+-The homepage will display a menu with two options: "Search for Books" and "Login/Signup." </br>
+-If you choose "Search for Books," you'll see an input field to search for books. Enter a search term and click the submit button to view search results.</br>
+-If you choose "Login/Signup," a modal will appear with a toggle between "Login" and "Signup." Choose the appropriate option.</br>
+-If you choose "Signup," you'll be presented with three inputs for a username, an email address, and a password.</br> Enter the required information and click the signup button to create your account and log in.</br>
+-If you choose "Login," you'll be presented with inputs for an email address and a password. Enter your account's email and password and click the login button to log in.</br>
+-Once logged in, the menu options will change to "Search for Books," "My Saved Books," and "Logout."</br>
+-When you search for books while logged in, you'll see an additional button to "Save" a book to your account.</br>
+-Click on the "Save" button on a book to add it to your saved books list.</br>
+-To view your saved books, click on "My Saved Books" in the menu.</br>
+-The "My Saved Books" page will display all the books you have saved, and you can click on the "Remove" button to delete a book from your saved list.</br>
+-To log out of the site, click on the "Logout" button in the menu.</br>
 
 ## Credits
 
 https://nodejs.org/en </br>
-</br>
+https://www.mongodb.com/</br>
 
 ## License
 
