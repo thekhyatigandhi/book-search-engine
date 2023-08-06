@@ -1,25 +1,14 @@
-// see SignupForm.js for comments
-import React, { useState, useEffect } from "react";
+// Look at SignupForm.js for comments
+import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 
-// import useMutation and LOGIN-USER
-import { useMutation } from "@apollo/react-hooks";
-import { LOGIN_USER } from "../utils/mutations";
-
+import { loginUser } from "../utils/API";
 import Auth from "../utils/auth";
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-
-  // declaring loginUser with useMutation
-  const [loginUser, { error }] = useMutation(LOGIN_USER);
-
-  useEffect(() => {
-    if (error) setShowAlert(true);
-    else setShowAlert(false);
-  }, [error]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -36,15 +25,19 @@ const LoginForm = () => {
       event.stopPropagation();
     }
 
-    // use loginUser function
     try {
-      const { data } = await loginUser({
-        variables: { ...userFormData },
-      });
+      const response = await loginUser(userFormData);
 
-      Auth.login(data.login.token);
-    } catch (e) {
-      console.error(e);
+      if (!response.ok) {
+        throw new Error("something went wrong!");
+      }
+
+      const { token, user } = await response.json();
+      console.log(user);
+      Auth.login(token);
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
     }
 
     setUserFormData({
@@ -65,7 +58,7 @@ const LoginForm = () => {
         >
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group>
+        <Form.Group className="mb-3">
           <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
             type="text"
@@ -80,7 +73,7 @@ const LoginForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="mb-3">
           <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
             type="password"
